@@ -23,7 +23,7 @@ div {
       margin-top: 1rem;
       font-size: 2rem;
       font-weight: 500;
-      line-height: 3rem;
+      line-height: 1.1rem;
     }
     &.highlight-background{
       background: var(--green);
