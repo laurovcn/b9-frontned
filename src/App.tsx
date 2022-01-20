@@ -17,7 +17,7 @@ export const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Login />} />
-            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/Dashboard" element={<Dashboard children={undefined} />} />
           </Routes>
         </BrowserRouter>
       </ChakraProvider>
