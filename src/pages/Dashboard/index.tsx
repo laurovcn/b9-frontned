@@ -6,28 +6,28 @@ import { Summary } from "../../components/Summary";
 import { TransactionsTable } from "../../components/TransactionTable";
 import { Container } from "./styles";
 
-export function Dashboard() {   
-  
+export function Dashboard() {
+
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
 
-  function handleCloseNewTransactionModal(){
+  function handleCloseNewTransactionModal() {
     setIsNewTransactionModalOpen(false);
   }
-  function handleOpenNewTransactionModal(){
+  function handleOpenNewTransactionModal() {
     setIsNewTransactionModalOpen(true);
   }
- 
+
   return (
 
     <TransactionsProvider>
-      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal}/> 
-      <NewTransactionModal 
-        isOpen ={isNewTransactionModalOpen}
-        onRequestClose={handleCloseNewTransactionModal}/> 
-      <Container>     
+      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
+      <NewTransactionModal
+        isOpen={isNewTransactionModalOpen}
+        onRequestClose={handleCloseNewTransactionModal} />
+      <Container>
         <Summary />
-        <TransactionsTable/>   
+        <TransactionsTable />
       </Container>
-    </TransactionsProvider>   
+    </TransactionsProvider>
   );
 }
